@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """Write a script that reads stdin line by line and computes metrics:
 
     Input format:
@@ -20,8 +20,7 @@
 
 import sys
 
-log_format = r'(\d+\.\d+\.\d+\.\d+) - \[.+\] "
-    GET /projects/260 HTTP/1.1" (\d+) (\d+)'
+log_format = r'(\d+\.\d+\.\d+\.\d+) - \[.+\] "GET /projects/260 HTTP/1.1" (\d+) (\d+)'
 
 status_codes_dict = {'200': 0, '301': 0, '400': 0, '401': 0,
                     '403': 0, '404': 0, '405': 0, '500': 0}
