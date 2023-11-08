@@ -11,15 +11,15 @@ request(apiUrl, (err, response, body) => {
     const movie = JSON.parse(body);
     const characterPromises = movie.characters.map((characterUrl) => {
       return new Promise((resolve, reject) => {
-	request(characterUrl, (err, response, body) => {
-	  if (err) {
-	    reject(err);
-	  } else if (response.statusCode === 200) {
-	    resolve(JSON.parse(body).name);
-	  } else {
-	    reject('Error Code: ' + response.statusCode);
-	  }
-	});
+        request(characterUrl, (err, response, body) => {
+          if (err) {
+            reject(err);
+          } else if (response.statusCode === 200) {
+            resolve(JSON.parse(body).name);
+          } else {
+            reject('Error Code: ' + response.statusCode);
+          }
+        });
       });
     });
 
