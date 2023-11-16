@@ -1,4 +1,4 @@
-#!/usr/binpython3
+#!/usr/bin/python3
 """Defines a rotate 2D matrix module
 """
 
