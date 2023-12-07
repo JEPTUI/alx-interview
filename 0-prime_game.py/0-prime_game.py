@@ -4,6 +4,8 @@
 
 
 def isWinner(x, nums):
+    """Finds the finner
+    """
     def is_prime(num):
         if num < 2:
             return False
